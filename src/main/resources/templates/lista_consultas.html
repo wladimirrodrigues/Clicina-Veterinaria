@@ -11,12 +11,14 @@
     <tr>
         <th>Nome do Pet</th>
         <th>Data da Consulta</th>
+        <th>Nome do dono</th>
     </tr>
     <!-- Aqui você pode iterar sobre a lista de consultas e exibir cada uma como uma linha na tabela -->
     <c:forEach items="${consultas}" var="consulta">
         <tr>
             <td>${consulta.nomePet}</td>
             <td>${consulta.dataConsulta}</td>
+            <td>${consulta.nomeDono}</td>
         </tr>
     </c:forEach>
 </table>

@@ -27,7 +27,7 @@ public class ConsultaController {
                                                  @RequestParam String nomeDono,
                                                  Model model) {
 
-        Consulta consulta = consultaService.agendarConsulta(nomePet, dataConsulta);
+        Consulta consulta = consultaService.agendarConsulta(nomePet, dataConsulta, nomeDono);
         model.addAttribute("consulta", consulta);
         return "confirmacao_agendamento";
     }

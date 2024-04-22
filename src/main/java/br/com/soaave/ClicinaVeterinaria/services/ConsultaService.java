@@ -13,8 +13,8 @@ public class ConsultaService {
     private List<Consulta> consultas = new ArrayList<>();
 
     // Método para agendar uma nova consulta
-    public Consulta agendarConsulta(String nomePet, String dataConsulta) {
-        Consulta novaConsulta = new Consulta(nomePet, dataConsulta);
+    public Consulta agendarConsulta(String nomePet, String dataConsulta, String nomeDono) {
+        Consulta novaConsulta = new Consulta(nomePet, dataConsulta, nomeDono);
         consultas.add(novaConsulta);
         return novaConsulta;
     }
