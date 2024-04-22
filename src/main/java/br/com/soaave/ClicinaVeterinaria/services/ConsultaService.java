@@ -10,7 +10,8 @@ import br.com.soaave.ClicinaVeterinaria.models.Consulta;
 public class ConsultaService {
 
     // Lista para armazenar as consultas agendadas (simulando um banco de dados)
-    private List<Consulta> consultas = new ArrayList<>();
+    private final List<Consulta> consultas = new ArrayList<>();
+
 
     // Método para agendar uma nova consulta
     public Consulta agendarConsulta(String nomePet, String dataConsulta, String nomeDono) {
