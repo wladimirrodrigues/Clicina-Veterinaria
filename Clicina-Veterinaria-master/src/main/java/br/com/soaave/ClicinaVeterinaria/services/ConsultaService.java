@@ -22,6 +22,6 @@ public class ConsultaService {
 
     // Método para obter todas as consultas agendadas
     public List<Consulta> listarConsultas() {
-        return consultas;
+        return consultas ;
     }
 }
