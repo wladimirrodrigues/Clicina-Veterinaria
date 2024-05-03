@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:c="" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Consultas Agendadas</title>
+</head>
+<body>
+<h1>Lista de Consultas Agendadas</h1>
+<table>
+    <tr>
+        <th>Nome do Pet</th>
+        <th>Data da Consulta</th>
+        <th>Nome do Dono</th>
+    </tr>
+    <!-- Aqui você pode iterar sobre a lista de consultas e exibir cada uma como uma linha na tabela -->
+    <tr th:each="consulta : ${consultas}">
+        <td th:text="${consulta.nomePet}"></td>
+        <td th:text="${consulta.dataConsulta}"></td>
+        <td th:text="${consulta.nomeDono}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Agendamento</title>
+    <!-- Inclua as bibliotecas jQuery e jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <!-- Inclua o arquivo de localização para o português do Brasil -->
+    <script src="https://code.jquery.com/ui/1.13.0/i18n/jquery-ui-i18n.min.js"></script>
+</head>
+<body>
+<h1>Formulário de Agendamento</h1>
+<form action="/agendar" method="post">
+
+    <label for="nomeDono">Nome do Dono:</label><br>
+    <input type="text" id="nomeDono" name="nomeDono"><br>
+
+    <label for="cpf">CPF:</label><br>
+    <input type="text" id="cpf" name="cpf"><br>
+
+    <label for="nomePet">Nome do Pet:</label><br>
+    <input type="text" id="nomePet" name="nomePet"><br>
+
+    <label for="especie">Espécie do Animal:</label><br>
+    <input type="text" id="especie" name="especie"><br>
+
+    <label for="dataConsulta">Data da Consulta:</label><br>
+    <!-- Adicione a classe "datepicker" ao campo de data -->
+    <input type="text" id="dataConsulta" name="dataConsulta" class="datepicker"><br><br>
+
+    <input type="submit" value="Agendar Consulta">
+</form>
+
+<!-- Script para inicializar o Datepicker -->
+<script>
+    $(function() {
+        // Configura o Datepicker para usar a localização em português do Brasil
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+
+        // Inicializa o Datepicker no campo de data
+        $(".datepicker").datepicker();
+    });
+</script>
+</body>
+</html>

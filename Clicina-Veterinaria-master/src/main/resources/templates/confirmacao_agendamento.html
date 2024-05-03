@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Agendamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .info {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        } .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Confirmação de Agendamento</h1>
+    <div class="info">
+        <p>A consulta foi agendada com sucesso para o seguinte pet:</p>
+        <p><strong>Nome do Pet:</strong> <span th:text="${consulta.nomePet}"></span></p>
+        <p><strong>Data da Consulta:</strong> <span th:text="${consulta.dataConsulta}"></span></p>
+        <p><strong>Nome do Dono:</strong> <span th:text="${consulta.nomeDono}"></span></p>
+    </div>
+    <!-- Adicione o botão com link para a página de consultas agendadas -->
+    <button onclick="window.location.href='/consultas'" class="btn">Ver Consultas Agendadas</button>
+</div>
+</body>
+</html>
